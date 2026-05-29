@@ -59,9 +59,7 @@ def get_completion(inputs, parameters=None, ENDPOINT_URL=os.environ['HF_API_ITT_
                                 headers=headers,
                                 data=json.dumps(data))
     return json.loads(response.content.decode("utf-8"))
-image_url = "https://free-images.com/sm/9596/dog_animal_greyhound_983023.jpg"
-display(IPython.display.Image(url=image_url))
-get_completion(image_url)
+
 import gradio as gr 
 
 def image_to_base64_str(pil_image):
